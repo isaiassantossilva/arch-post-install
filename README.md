@@ -1,6 +1,6 @@
 # Pós-Instalação
 
-Comandos
+### Comandos
 ![Comandos](img/commands.png)
 
 
@@ -12,21 +12,6 @@ sudo pacman -Syu
 ### Instalar algumas ferramentas
 ```
 sudo pacman -S nano git curl wget zip unzip
-```
-
-### Instalar algumas fontes
-```
-sudo pacman -S noto-fonts-cjk
-```
-
-### Instalar firewall (opcional)
-```
-sudo pacman -S gufw
-```
-
-### Instalar gestor de firmware (opcional)
-```
-sudo pacman -S fwupd
 ```
 
 ### Habilitar leitura para dispositivos NTFS da microsoft
@@ -62,7 +47,17 @@ gnome
 sudo pacman -S gnome-software-packagekit-plugin
 ```
 
-### Instalar helper do AUR
+### Instalar algumas fontes
+```
+sudo pacman -S noto-fonts-cjk
+```
+
+### Habilitar flatpak
+```
+sudo pacman -S flatpak
+```
+
+### Habilitar helper do AUR
 ```
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
@@ -70,6 +65,26 @@ cd yay
 makepkg -si
 
 # yay -Y --gendb
+```
+
+### Instalar vizualizador de imagem
+```
+flatpak install flathub org.kde.gwenview
+```
+
+### Instalar reprodutor de vídeo
+```
+flatpak install flathub io.mpv.Mpv
+```
+
+### Instalar firewall (opcional)
+```
+sudo pacman -S gufw
+```
+
+### Instalar gestor de firmware (opcional)
+```
+sudo pacman -S fwupd
 ```
 
 ### Instalar google chrome
@@ -82,12 +97,19 @@ yay -S google-chrome
 yay -S visual-studio-code-bin
 ```
 
-### Instalar vizualizador de imagem
+### Instalar docker e docker compose
 ```
-flatpak install flathub org.kde.gwenview
+sudo pacman -S docker docker-compose
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
 ```
 
-### Instalar reprodutor de vídeo
+### Instalar distrobox
 ```
-flatpak install flathub io.mpv.Mpv
+sudo pacman -S distrobox
+```
+### Instalar qBittorrent
+```
+flatpak install flathub org.qbittorrent.qBittorrent
 ```
