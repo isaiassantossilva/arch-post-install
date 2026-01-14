@@ -3,7 +3,6 @@
 ### Comandos
 ![Comandos](img/commands.png)
 
-
 ### Atualizar o repositório e o sistema
 ```
 sudo pacman -Syu
@@ -12,6 +11,11 @@ sudo pacman -Syu
 ### Instalar algumas ferramentas
 ```
 sudo pacman -S nano git curl wget zip unzip
+```
+
+### Instalar algumas fontes
+```
+sudo pacman -S noto-fonts-cjk
 ```
 
 ### Habilitar leitura para dispositivos NTFS da microsoft
@@ -41,15 +45,9 @@ kde
 ```
 sudo pacman -S packagekit-qt6
 ```
-
 gnome
 ```
 sudo pacman -S gnome-software-packagekit-plugin
-```
-
-### Instalar algumas fontes
-```
-sudo pacman -S noto-fonts-cjk
 ```
 
 ### Habilitar flatpak
@@ -109,6 +107,7 @@ sudo usermod -aG docker $USER
 ```
 sudo pacman -S distrobox
 ```
+
 ### Instalar qBittorrent
 ```
 flatpak install flathub org.qbittorrent.qBittorrent
