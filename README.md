@@ -40,16 +40,6 @@ sudo systemctl enable tlp
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 ```
 
-### Habilitar para mostrar apps do repositório padrão na loja de apps
-kde
-```
-sudo pacman -S packagekit-qt6
-```
-gnome
-```
-sudo pacman -S gnome-software-packagekit-plugin
-```
-
 ### Habilitar flatpak
 ```
 sudo pacman -S flatpak
@@ -63,6 +53,16 @@ cd yay
 makepkg -si
 
 # yay -Y --gendb
+```
+
+### Habilitar para mostrar apps do repositório padrão na loja de apps
+kde
+```
+sudo pacman -S packagekit-qt6
+```
+gnome
+```
+sudo pacman -S gnome-software-packagekit-plugin
 ```
 
 ### Instalar vizualizador de imagem
