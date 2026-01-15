@@ -95,6 +95,21 @@ cd ..
 rm -rf yay
 ```
 
+### Habilitar snap
+```
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si
+
+sudo systemctl enable --now snapd.socket
+sudo systemctl enable --now snapd.apparmor.service
+
+sudo ln -s /var/lib/snapd/snap /snap
+
+cd ..
+rm -rf snapd
+```
+
 ### Mostrar apps do repositório padrão na loja de apps
 kde
 ```
@@ -105,9 +120,19 @@ gnome
 sudo pacman -S gnome-software-packagekit-plugin
 ```
 
+### Instalar gerenciador de flatpaks
+```
+flatpak install flathub io.github.flattool.Warehouse
+```
+
 ### Instalar gerenciador de permissões para flatpaks
 ```
 flatpak install flathub com.github.tchx84.Flatseal
+```
+
+### Instalar Flatsweep (Gerenciador de arquivos residuais para flatpak)
+```
+flatpak install flathub io.github.giantpinkrobots.flatsweep
 ```
 
 ### Instalar vizualizador de imagem
@@ -125,12 +150,12 @@ flatpak install flathub org.gnome.eog
 flatpak install flathub io.mpv.Mpv
 ```
 
-### Instalar firewall (opcional)
+### Instalar firewall
 ```
 sudo pacman -S gufw
 ```
 
-### Instalar gestor de firmware (opcional)
+### Instalar gestor de firmware
 ```
 sudo pacman -S fwupd
 ```
@@ -151,6 +176,11 @@ sudo pacman -S docker docker-compose
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
+```
+
+### Instalar Podman Desktop
+```
+flatpak install flathub io.podman_desktop.PodmanDesktop
 ```
 
 ### Instalar distrobox
@@ -178,7 +208,7 @@ flatpak install flathub org.qbittorrent.qBittorrent
 flatpak install flathub com.usebottles.bottles
 ```
 
-### Instalar gradia
+### Instalar gradia (Editor de imagens)
 ```
 flatpak install flathub be.alexandervanhee.gradia
 ```
@@ -186,4 +216,64 @@ flatpak install flathub be.alexandervanhee.gradia
 ### Instalar onlyoffice
 ```
 flatpak install flathub org.onlyoffice.desktopeditors
+```
+
+### Instalar gear lever (Utilitário para AppImage)
+```
+flatpak install flathub it.mijorus.gearlever
+```
+
+### Instalar Dev Toolbox (Utilitário para desenvolvimento)
+```
+flatpak install flathub me.iepure.devtoolbox
+```
+
+### Instalar Free Download Manager
+```
+flatpak install flathub org.freedownloadmanager.Manager
+```
+
+### Instalar LocalSend (Utilitário para compartilhar arquivos na mesma rede)
+```
+flatpak install flathub org.localsend.localsend_app
+```
+
+### Instalar Flameshot (Utilitário screenshots)
+```
+flatpak install flathub org.flameshot.Flameshot
+```
+
+### Instalar CPU-X
+```
+flatpak install flathub io.github.thetumultuousunicornofdarkness.cpu-x
+```
+
+### Instalar GPU-Viewer
+```
+flatpak install flathub io.github.arunsivaramanneo.GPUViewer
+```
+
+### Instalar PortProton (Utilitário para rodar alguns apps de Windows)
+```
+flatpak install flathub ru.linux_gaming.PortProton
+```
+
+### Instalar Obsidian
+```
+flatpak install flathub md.obsidian.Obsidian
+```
+
+### Instalar Embellish (Utilitário para baixar fontes)
+```
+flatpak install flathub io.github.getnf.embellish
+```
+
+### Instalar Master PDF Editor (AppImage)
+```
+https://code-industry.net/public/Master_PDF_Editor_5.9.94-x86_64.AppImage
+```
+
+### Instalar Muon (Snap)
+```
+sudo snap install muon-ssh --classic
 ```
