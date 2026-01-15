@@ -182,3 +182,8 @@ flatpak install flathub com.usebottles.bottles
 ```
 flatpak install flathub be.alexandervanhee.gradia
 ```
+
+### Instalar onlyoffice
+```
+flatpak install flathub org.onlyoffice.desktopeditors
+```
