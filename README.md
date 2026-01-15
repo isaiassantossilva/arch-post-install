@@ -177,3 +177,8 @@ flatpak install flathub org.qbittorrent.qBittorrent
 ```
 flatpak install flathub com.usebottles.bottles
 ```
+
+### Instalar gradia
+```
+flatpak install flathub be.alexandervanhee.gradia
+```
