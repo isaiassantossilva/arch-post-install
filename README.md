@@ -172,3 +172,8 @@ sudo pacman -S gnome-boxes
 ```
 flatpak install flathub org.qbittorrent.qBittorrent
 ```
+
+### Instalar bottles
+```
+flatpak install flathub com.usebottles.bottles
+```
