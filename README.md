@@ -7,10 +7,76 @@
 ```
 sudo pacman -Syu
 ```
+ou para forçar
+```
+sudo pacman -Syyuu
+```
 
 ### Instalar algumas ferramentas
 ```
 sudo pacman -S nano git curl wget zip unzip ntfs-3g
+```
+
+### Instalar timeshift
+```
+sudo pacman -S timeshift btrfs-progs
+```
+
+Integrar com o grub
+```
+sudo pacman -S grub-btrfs inotify-tools
+```
+
+Instalar hook de snapshot automático antes de atualizar pacotes do repositório
+```
+yay -S timeshift-autosnap
+```
+
+Arquivo de confiuração (caso necessário)
+```
+sudo nano /etc/timeshift-autosnap.conf
+```
+```
+maxSnapshots
+```
+
+Configuração do grub-btrfs (opcional, somente se necessário)
+```
+sudo nano /etc/default/grub-btrfs/config
+```
+```
+GRUB_BTRFS_SUBMENUNAME="Arch Linux snapshots"
+GRUB_BTRFS_LIMIT=10
+GRUB_BTRFS_SHOW_SNAPSHOTS_FOUND=true
+GRUB_BTRFS_SHOW_SNAPSHOTS=true
+GRUB_BTRFS_IGNORE_SPECIFIED_PATHS=false
+GRUB_BTRFS_SNAPSHOT_KERNEL_PARAMETERS="rw"
+```
+
+Criar um override do systemd
+```
+sudo systemctl edit grub-btrfsd
+```
+```
+[Service]
+ExecStart=
+ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto
+```
+
+Habilitar o serviço
+```
+sudo systemctl start grub-btrfsd
+sudo systemctl enable grub-btrfsd
+```
+
+Checar o status
+```
+sudo systemctl status grub-btrfsd
+```
+
+Atualizar o GRUB
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ### Instalar algumas fontes
