@@ -11,12 +11,12 @@ ou para forçar
 ```
 sudo pacman -Syyuu
 ```
-
+---
 ### Instalar algumas ferramentas
 ```
 sudo pacman -S nano git curl wget zip unzip ntfs-3g
 ```
-
+---
 ### Instalar timeshift
 ```
 sudo pacman -S timeshift
@@ -83,12 +83,12 @@ Atualizar o GRUB
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
+---
 ### Instalar algumas fontes
 ```
 sudo pacman -S noto-fonts ttf-jetbrains-mono-nerd
 ```
-
+---
 ### Instalar zsh
 ```
 sudo pacman -S zsh
@@ -134,7 +134,7 @@ echo '# Starship Prompt' >> ~/.zshrc
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 starship preset nerd-font-symbols -o ~/.config/starship.toml
 ```
-
+---
 ### Habilitar serviço de bluetooth
 ```
 sudo systemctl start bluetooth.service --now
@@ -144,19 +144,19 @@ ou
 sudo systemctl start bluetooth
 sudo systemctl enable bluetooth
 ```
-
+---
 ### Otimizar a vida da bateria do notebook
 ```
 sudo pacman -S tlp
 sudo systemctl enable tlp
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 ```
-
+---
 ### Habilitar flatpak
 ```
 sudo pacman -S flatpak
 ```
-
+---
 ### Habilitar helper do AUR (yay)
 ```
 sudo pacman -S --needed git base-devel
@@ -167,7 +167,7 @@ makepkg -si
 cd ..
 rm -rf yay
 ```
-
+---
 ### Habilitar snap
 ```
 git clone https://aur.archlinux.org/snapd.git
@@ -182,7 +182,7 @@ sudo ln -s /var/lib/snapd/snap /snap
 cd ..
 rm -rf snapd
 ```
-
+---
 ### Mostrar apps do repositório padrão na loja de apps
 kde
 ```
@@ -192,57 +192,57 @@ gnome
 ```
 sudo pacman -S gnome-software-packagekit-plugin
 ```
-
+---
 ### Instalar gerenciador de flatpaks
 ```
 flatpak install flathub io.github.flattool.Warehouse
 ```
-
+---
 ### Instalar gerenciador de permissões para flatpaks
 ```
 flatpak install flathub com.github.tchx84.Flatseal
 ```
-
+---
 ### Instalar Flatsweep (Gerenciador de arquivos residuais para flatpak)
 ```
 flatpak install flathub io.github.giantpinkrobots.flatsweep
 ```
-
+---
 ### Instalar vizualizador de imagem
 kde
 ```
-flatpak install flathub org.kde.gwenview
+sudo pacman -S gwenview
 ```
 gnome
 ```
-flatpak install flathub org.gnome.eog
+sudo pacman -S eog
 ```
-
+---
 ### Instalar reprodutor de vídeo
 ```
-flatpak install flathub io.mpv.Mpv
+sudo pacman -S mpv
 ```
-
+---
 ### Instalar firewall
 ```
 sudo pacman -S gufw
 ```
-
+---
 ### Instalar gestor de firmware
 ```
 sudo pacman -S fwupd
 ```
-
+---
 ### Instalar google chrome
 ```
 yay -S google-chrome
 ```
-
+---
 ### Instalar vscode
 ```
 yay -S visual-studio-code-bin
 ```
-
+---
 ### Instalar docker e docker compose
 ```
 sudo pacman -S docker docker-compose
@@ -250,102 +250,102 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
 ```
-
+---
 ### Instalar Podman Desktop
 ```
-flatpak install flathub io.podman_desktop.PodmanDesktop
+sudo pacman -S podman-desktop
 ```
-
+---
 ### Instalar distrobox
 ```
 sudo pacman -S distrobox
 ```
-
+---
 ### Instalar gerenciador de versões universal
 ```
 yay -S asdf-vm
 ```
-
+---
 ### Instalar gnome boxes
 ```
 sudo pacman -S gnome-boxes
 ```
-
+---
 ### Instalar qBittorrent
 ```
-flatpak install flathub org.qbittorrent.qBittorrent
+sudo pacman -S qbittorrent
 ```
-
+---
 ### Instalar bottles
 ```
 flatpak install flathub com.usebottles.bottles
 ```
-
+---
 ### Instalar gradia (Editor de imagens)
 ```
 flatpak install flathub be.alexandervanhee.gradia
 ```
-
+---
 ### Instalar onlyoffice
 ```
 flatpak install flathub org.onlyoffice.desktopeditors
 ```
-
+---
 ### Instalar gear lever (Utilitário para AppImage)
 ```
 flatpak install flathub it.mijorus.gearlever
 ```
-
+---
 ### Instalar Dev Toolbox (Utilitário para desenvolvimento)
 ```
 flatpak install flathub me.iepure.devtoolbox
 ```
-
+---
 ### Instalar Free Download Manager
 ```
 flatpak install flathub org.freedownloadmanager.Manager
 ```
-
+---
 ### Instalar LocalSend (Utilitário para compartilhar arquivos na mesma rede)
 ```
 flatpak install flathub org.localsend.localsend_app
 ```
-
+---
 ### Instalar Flameshot (Utilitário screenshots)
 ```
 flatpak install flathub org.flameshot.Flameshot
 ```
-
+---
 ### Instalar CPU-X
 ```
 flatpak install flathub io.github.thetumultuousunicornofdarkness.cpu-x
 ```
-
+---
 ### Instalar GPU-Viewer
 ```
 flatpak install flathub io.github.arunsivaramanneo.GPUViewer
 ```
-
+---
 ### Instalar PortProton (Utilitário para rodar alguns apps de Windows)
 ```
 flatpak install flathub ru.linux_gaming.PortProton
 ```
-
+---
 ### Instalar Obsidian
 ```
 flatpak install flathub md.obsidian.Obsidian
 ```
-
+---
 ### Instalar Embellish (Utilitário para baixar fontes)
 ```
 flatpak install flathub io.github.getnf.embellish
 ```
-
+---
 ### Instalar Master PDF Editor (AppImage)
 ```
 https://code-industry.net/public/Master_PDF_Editor_5.9.94-x86_64.AppImage
 ```
-
+---
 ### Instalar Muon (Snap)
 ```
 sudo snap install muon-ssh --classic
