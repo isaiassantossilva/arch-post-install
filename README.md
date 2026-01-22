@@ -93,8 +93,29 @@ sudo pacman -S noto-fonts ttf-jetbrains-mono-nerd
 ```
 sudo pacman -S zsh
 chsh -s $(which zsh)
-reboot
 ```
+
+Instalar Oh My Zsh
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Instalar plugins
+```
+sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
+```
+
+Criar link simbólico
+```
+ln -s /usr/share/zsh/plugins $ZSH_CUSTOM
+```
+
+Adicionar ao arquivo ~/.zshrc
+```
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+```
+
+**Fazer manualmente:**
 
 Binds de algumas teclas
 ```
