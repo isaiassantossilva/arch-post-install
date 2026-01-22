@@ -19,12 +19,12 @@ sudo pacman -S nano git curl wget zip unzip ntfs-3g
 
 ### Instalar timeshift
 ```
-sudo pacman -S timeshift btrfs-progs
+sudo pacman -S timeshift
 ```
 
 Integrar com o grub
 ```
-sudo pacman -S grub-btrfs inotify-tools
+sudo pacman -S grub-btrfs btrfs-progs inotify-tools
 ```
 
 Instalar hook de snapshot automático antes de atualizar pacotes do repositório
@@ -72,6 +72,11 @@ sudo systemctl enable grub-btrfsd
 Checar o status
 ```
 sudo systemctl status grub-btrfsd
+```
+
+Criar um novo snapshot
+```
+sudo timeshift-gtk
 ```
 
 Atualizar o GRUB
@@ -124,6 +129,8 @@ echo 'source <(fzf --zsh)' >> ~/.zshrc
 Instalar Starship Prompt
 ```
 sudo pacman -S starship
+echo >> ~/.zshrc
+echo '# Starship Prompt' >> ~/.zshrc
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 starship preset nerd-font-symbols -o ~/.config/starship.toml
 ```
