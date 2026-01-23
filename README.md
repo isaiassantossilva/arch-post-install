@@ -123,6 +123,7 @@ sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
 
 Criar link simbólico
 ```
+rm -rf $ZSH_CUSTOM/plugins
 ln -s /usr/share/zsh/plugins $ZSH_CUSTOM
 ```
 
@@ -257,7 +258,7 @@ sudo pacman -S eog
 ---
 ### Instalar reprodutor de vídeo
 ```
-sudo pacman -S mpv
+sudo pacman -S vlc
 ```
 ---
 ### Instalar firewall
@@ -296,6 +297,16 @@ sudo pacman -S podman-desktop
 ### Instalar distrobox
 ```
 sudo pacman -S distrobox
+```
+---
+### Instalar BoxBuddy
+```
+flatpak install flathub io.github.dvlv.boxbuddyrs
+```
+---
+### Instalar SdkMan
+```
+curl -s "https://get.sdkman.io" | bash
 ```
 ---
 ### Instalar gerenciador de versões universal
