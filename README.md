@@ -14,7 +14,7 @@ sudo pacman -Syyuu
 ---
 ### Instalar algumas ferramentas
 ```
-sudo pacman -S nano git curl wget zip unzip ntfs-3g
+sudo pacman -S nano git curl wget zip unzip ntfs-3g noto-fonts ttf-jetbrains-mono-nerd
 ```
 ---
 ### Instalar timeshift
@@ -84,9 +84,25 @@ Atualizar o GRUB
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ---
-### Instalar algumas fontes
+### Em caso de dual boot
 ```
-sudo pacman -S noto-fonts ttf-jetbrains-mono-nerd
+sudo pacman -S os-prober
+```
+
+Editar o arquivo do grub e descomentar "GRUB_DISABLE_OS_PROBER=false
+"
+```
+sudo nano /etc/default/grub
+```
+
+Executar os-prober
+```
+sudo os-prober
+```
+
+Atualizar o GRUB
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ---
 ### Instalar zsh
