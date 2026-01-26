@@ -231,21 +231,6 @@ gnome
 sudo pacman -S gnome-software-packagekit-plugin
 ```
 ---
-### Instalar gerenciador de flatpaks
-```
-flatpak install flathub io.github.flattool.Warehouse
-```
----
-### Instalar gerenciador de permissões para flatpaks
-```
-flatpak install flathub com.github.tchx84.Flatseal
-```
----
-### Instalar Flatsweep (Gerenciador de arquivos residuais para flatpak)
-```
-flatpak install flathub io.github.giantpinkrobots.flatsweep
-```
----
 ### Instalar vizualizador de imagem
 kde
 ```
@@ -261,16 +246,6 @@ sudo pacman -S eog
 sudo pacman -S vlc
 ```
 ---
-### Instalar firewall
-```
-sudo pacman -S gufw
-```
----
-### Instalar gestor de firmware
-```
-sudo pacman -S fwupd
-```
----
 ### Instalar google chrome
 ```
 yay -S google-chrome
@@ -279,6 +254,31 @@ yay -S google-chrome
 ### Instalar vscode
 ```
 yay -S visual-studio-code-bin
+```
+---
+### Instalar gerenciador de flatpaks
+```
+flatpak install flathub io.github.flattool.Warehouse
+```
+---
+### Instalar gerenciador de permissões para flatpaks
+```
+flatpak install flathub com.github.tchx84.Flatseal
+```
+---
+### Instalar Flatsweep (Gerenciador de arquivos residuais para flatpak)
+```
+flatpak install flathub io.github.giantpinkrobots.flatsweep
+```
+---
+### Instalar firewall
+```
+sudo pacman -S gufw
+```
+---
+### Instalar gestor de firmware
+```
+sudo pacman -S fwupd
 ```
 ---
 ### Instalar docker e docker compose
