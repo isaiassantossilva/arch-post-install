@@ -183,6 +183,12 @@ sudo systemctl start bluetooth
 sudo systemctl enable bluetooth
 ```
 ---
+### Habilitar serviço de DNS se estiver enfrentado problemas com internet ou VPN
+```
+sudo systemctl start systemd-resolved
+sudo systemctl enable systemd-resolved
+```
+---
 ### Otimizar a vida da bateria do notebook
 ```
 sudo pacman -S tlp
