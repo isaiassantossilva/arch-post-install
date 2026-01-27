@@ -185,6 +185,7 @@ sudo systemctl enable bluetooth
 ---
 ### Habilitar serviço de DNS se estiver enfrentado problemas com internet ou VPN
 ```
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl start systemd-resolved
 sudo systemctl enable systemd-resolved
 ```
